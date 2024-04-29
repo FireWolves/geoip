@@ -8,7 +8,7 @@
         "wantedList": ["cn"],
         "onlyIPType": "ipv6"
       }
-    },
+    }
   ],
   "output": [
     {
@@ -19,6 +19,6 @@
         "outputDir": "./publish",
         "onlyIPType": "ipv6"
       }
-    },
+    }
   ]
 }
