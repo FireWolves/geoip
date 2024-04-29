@@ -31,11 +31,12 @@ jobs:
         run: |
           echo "TAG_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
           echo "RELEASE_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+          mkdir -p ./data
         shell: bash
 
       - name: Get prebuilded geoip files
         run: |
-          curl -sSL https://raw.githubusercontent.com/Loyalsoldier/geoip/release/cn.dat>> data/cn.dat
+          curl -sSL https://raw.githubusercontent.com/Loyalsoldier/geoip/release/cn.dat >> data/cn.dat
       - name: Build geoip files
         run: |
           go run ./
