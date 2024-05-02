@@ -41,6 +41,9 @@ jobs:
       - name: Build geoip files
         run: |
           go run ./
+      - name: move rule file to publish
+        run: |
+          cp ./ZJU-IP.yaml ./publish/ZJU-IP.yaml
           
       - name: Git push assets to "release" branch
         run: |
