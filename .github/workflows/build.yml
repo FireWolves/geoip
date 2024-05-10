@@ -43,7 +43,8 @@ jobs:
           go run ./
       - name: move rule file to publish
         run: |
-          cp ./ZJU-IP.yaml ./publish/ZJU-IP.yaml
+          cp ./*ZJU* ./publish/
+
           
       - name: Git push assets to "release" branch
         run: |
